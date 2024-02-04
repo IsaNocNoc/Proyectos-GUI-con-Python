@@ -35,13 +35,13 @@ class MenuVuelosAplicacion (QDialog):
 
     def SeleccionBoton(self):
         if self.ListaSeleccion.SL_PrimeraClase.isChecked()==True:
-            self.ListaSeleccion.Texto_Output.setText('Usted escogio el vuelo de primera clase')
+            self.ListaSeleccion.Texto_Output.setText('Usted escogio el vuelo de primera clase\nBuen viaje!')
 
         if self.ListaSeleccion.SL_ClaseNegocio.isChecked()==True:
-            self.ListaSeleccion.Texto_Output.setText('Usted escogio el vuelo de clase de negocio')
+            self.ListaSeleccion.Texto_Output.setText('Usted escogio el vuelo de clase de negocio\nExcelente Viaje!')
 
         if self.ListaSeleccion.SL_ClaseEconomico.isChecked()==True:
-            self.ListaSeleccion.Texto_Output.setText('Usted escogio el vuelo de clase de economico')
+            self.ListaSeleccion.Texto_Output.setText('Usted escogio el vuelo de clase de economico\nBuen Viaje!')
 
 if __name__ == '__main__':
     app=QApplication(sys.argv)
