@@ -1,0 +1,4 @@
+comando para convertir archivo ui a py
+
+ubicas en la carpeta en donde esta el archivo (cd c/:...) y ejecutas:
+pyuic5 [Nombre del Archivo].ui > [Nombre del archivo].py
