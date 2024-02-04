@@ -7,7 +7,7 @@ class MenuVuelosAplicacion (QDialog):
     def __init__(self):
         super().__init__()
 
-        self.ListaSeleccion=Ui_Dialog
+        self.ListaSeleccion=Ui_Dialog()
         self.ListaSeleccion.setupUi(self)
 
         self.ListaSeleccion.SL_PrimeraClase.toggled.connect(self.TextoInformativo)
@@ -27,11 +27,11 @@ class MenuVuelosAplicacion (QDialog):
 
         if self.ListaSeleccion.SL_ClaseNegocio.isChecked()==True:
             costo_vuelo=150
-            print("Este es un vuelo de negocios")
+            self.ListaSeleccion.Texto_Info.setText('El costo de la clase de negocio es {}'.format(costo_vuelo))
 
         if self.ListaSeleccion.SL_ClaseEconomico.isChecked()==True:
             costo_vuelo=120
-            print("Este es un vuelo economico")
+            self.ListaSeleccion.Texto_Info.setText('El costo de clase economica es de {}'.format(costo_vuelo))
 
     def SeleccionBoton(self):
         if self.ListaSeleccion.SL_PrimeraClase.isChecked()==True:
@@ -47,4 +47,4 @@ if __name__ == '__main__':
     app=QApplication(sys.argv)
     ejecucion=MenuVuelosAplicacion()
     ejecucion.show()
-    sys.exit(sys.exec_())
+    sys.exit(app.exec_())
