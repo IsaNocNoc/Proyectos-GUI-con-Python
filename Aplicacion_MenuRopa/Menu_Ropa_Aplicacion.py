@@ -25,25 +25,32 @@ class MenuRopaAplicacion(QDialog):
     def mostrar_informacion(self):
         Talla_seleccion=''
         metodo_pago=''
-
-        if self.ListaRopa.Extrachica.isChecked==True:
-            Talla_seleccion='XS'
-        if self.ListaRopa.Chica.isChecked==True:
-            Talla_seleccion='Talla Chica'
-        if self.ListaRopa.Mediana.isChecked==True:
-            Talla_seleccion='Talla Mediana'
-        if self.ListaRopa.Grande.isChecked==True:
-            Talla_seleccion='Talla Grande'
-
-        if self.ListaRopa.PagoTarjetas.isChecked==True:
-            Talla_seleccion='Pago con Tarjeta'
-        if self.ListaRopa.PagoEfectivo.isChecked==True:
-            Talla_seleccion='Pago con Efectivo'
-        if self.ListaRopa.PagoTransaccion.isChecked==True:
-            Talla_seleccion='Pago contransaccion'
-
-        self.ListaRopa.Texto_Outout.setText('La Talla seleccionada es {} \nEl metodo de pago es {}'.format(Talla_seleccion,metodo_pago))
         
+        if self.ListaRopa.Extrachica.isChecked()==True:
+            Talla_seleccion='XS'
+            self.ListaRopa.Texto_Output_1.setText('La Talla seleccionada es {}'.format(Talla_seleccion))
+        if self.ListaRopa.Chica.isChecked()==True:
+            Talla_seleccion='Talla Chica'
+            self.ListaRopa.Texto_Output_1.setText('La Talla seleccionada es {}'.format(Talla_seleccion))
+        if self.ListaRopa.Mediana.isChecked()==True:
+            Talla_seleccion='Talla Mediana'
+            self.ListaRopa.Texto_Output_1.setText('La Talla seleccionada es {}'.format(Talla_seleccion))
+        if self.ListaRopa.Grande.isChecked()==True:
+            Talla_seleccion='Talla Grande'
+            self.ListaRopa.Texto_Output_1.setText('La Talla seleccionada es {}'.format(Talla_seleccion))
+        
+
+        if self.ListaRopa.PagoTarjetas.isChecked()==True:
+            metodo_pago='Pago con Tarjeta'
+            self.ListaRopa.Texto_OutPut2.setText('El metodod de pago es {}'. format(metodo_pago))
+        if self.ListaRopa.PagoEfectivo.isChecked()==True:
+            metodo_pago='Pago con Efectivo'
+            self.ListaRopa.Texto_OutPut2.setText('El metodod de pago es {}'. format(metodo_pago))
+        if self.ListaRopa.PagoTransaccion.isChecked()==True:
+            metodo_pago='Pago contransaccion'
+            self.ListaRopa.Texto_OutPut2.setText('El metodod de pago es {}'. format(metodo_pago))
+
+
 if __name__ == '__main__':
     app=QApplication(sys.argv)
     ejecucion=MenuRopaAplicacion()
