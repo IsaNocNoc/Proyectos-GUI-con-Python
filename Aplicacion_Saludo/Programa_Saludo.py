@@ -25,7 +25,7 @@ class Ui_Dialog(object):
         self.pb_BotonEjecucion.setGeometry(QtCore.QRect(20, 70, 91, 31))
         self.pb_BotonEjecucion.setObjectName("pb_BotonEjecucion")
         self.lbl_TextoMostrar = QtWidgets.QLabel(Dialog)
-        self.lbl_TextoMostrar.setGeometry(QtCore.QRect(20, 120, 121, 51))
+        self.lbl_TextoMostrar.setGeometry(QtCore.QRect(20, 120, 271, 51))
         self.lbl_TextoMostrar.setText("")
         self.lbl_TextoMostrar.setObjectName("lbl_TextoMostrar")
 
