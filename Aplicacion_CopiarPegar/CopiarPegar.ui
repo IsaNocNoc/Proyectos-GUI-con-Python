@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>382</width>
+    <height>263</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Copy/Paste</string>
+  </property>
+  <widget class="QPushButton" name="BotonCopiar">
+   <property name="geometry">
+    <rect>
+     <x>60</x>
+     <y>200</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Copiar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="BotonPegar">
+   <property name="geometry">
+    <rect>
+     <x>240</x>
+     <y>200</y>
+     <width>91</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Pegar</string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="TextoInput">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>161</width>
+     <height>171</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="TextoOutput">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>10</y>
+     <width>161</width>
+     <height>171</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>BotonCopiar</sender>
+   <signal>pressed()</signal>
+   <receiver>TextoInput</receiver>
+   <slot>selectAll()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>117</x>
+     <y>207</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>106</x>
+     <y>177</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>BotonCopiar</sender>
+   <signal>released()</signal>
+   <receiver>TextoInput</receiver>
+   <slot>copy()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>140</x>
+     <y>218</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>147</x>
+     <y>170</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>BotonPegar</sender>
+   <signal>pressed()</signal>
+   <receiver>TextoOutput</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>263</x>
+     <y>210</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>267</x>
+     <y>173</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>BotonPegar</sender>
+   <signal>released()</signal>
+   <receiver>TextoOutput</receiver>
+   <slot>paste()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>301</x>
+     <y>208</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>312</x>
+     <y>175</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
