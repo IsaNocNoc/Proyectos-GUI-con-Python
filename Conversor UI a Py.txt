@@ -4,3 +4,14 @@ ubicas en la carpeta en donde esta el archivo (cd c/:...) y ejecutas:
 pyuic5 [Nombre del Archivo].ui > [Nombre del archivo].py
 
 ***El nombre del archivo no debe de contener espacios para que pueda identificar el archivo como uno solo y no como varios***
+
+19/06/2024
+Solucion del error:
+PS D:\Aplicaciones QT Designer\practicas> python Aplicacion_PracticaComboBox.py
+Traceback (most recent call last):
+  File "D:\Aplicaciones QT Designer\practicas\Aplicacion_PracticaComboBox.py", line 4, in <module>
+    from Practica_ComboBox import Ui_Dialog
+SyntaxError: source code string cannot contain null bytes
+
+•Cuando conviertas el archivo .ui a python tienes que escribirlo de la siguiente manera:
+pyuic5 [Nombre del Archivo].ui -o [Nombre del archivo].py
