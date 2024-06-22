@@ -15,3 +15,7 @@ SyntaxError: source code string cannot contain null bytes
 
 •Cuando conviertas el archivo .ui a python tienes que escribirlo de la siguiente manera:
 pyuic5 [Nombre del Archivo].ui -o [Nombre del archivo].py
+
+---------------------------------------------------------------------------------------------------------------------------
+convertir archivo python a .exe:
+pyinstaller --onefile --windowed --icon "[nombre logo.ico]" --name "[nombre para la aplicacion]" [nombre de la aplicacion a convertir].py
