@@ -18,4 +18,4 @@ pyuic5 [Nombre del Archivo].ui -o [Nombre del archivo].py
 
 ---------------------------------------------------------------------------------------------------------------------------
 convertir archivo python a .exe:
-pyinstaller --onefile --windowed --icon "[nombre logo.ico]" --name "[nombre para la aplicacion]" [nombre de la aplicacion a convertir].py
+[Ruta de los archivos a manipulas]> pyinstaller --onefile --windowed --icon "[nombre logo.ico]" --name "[nombre para la aplicacion]" [nombre de la aplicacion a convertir].py
